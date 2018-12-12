@@ -21,4 +21,4 @@ completeData <- complete(imputed_Data, 2)
 summary(completeData)
 # 書き込みのディレクトリを変えよう
 setwd("/Users/yasuchikaonuki/dev/work/imputation/imputated")
-write.csv(completeData, args[2], row.names=FALSE, quote=FALSE) # ムカつくと事col.names=FALSEは指定しても有効にならない
+write.csv(completeData, args[2], row.names=FALSE, quote=FALSE) # ムカつく事にcol.names=FALSEは指定しても有効にならない
