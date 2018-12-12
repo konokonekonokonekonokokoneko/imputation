@@ -14,7 +14,8 @@ df <- read.csv(args[1], header=FALSE, na.strings=c("", "NULL"))
 df$V1 <- NULL
 df$V2 <- NULL
 # パラメータをチューニングする必要はあるかな？
-imputed_Data <- mice(df, m=5, maxit=50, method='pmm', seed=500)
+#imputed_Data <- mice(df, m=5, maxit=50, method='pmm', seed=500)
+imputed_Data <- mice(df, m=5, maxit=20, method='pmm', seed=500)
 summary(imputed_Data)
 completeData <- complete(imputed_Data, 2)
 summary(completeData)
